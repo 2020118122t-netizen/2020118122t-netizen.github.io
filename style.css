@@ -1,112 +1,923 @@
+/* =========================
+   BASIC
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 100px;
+
+    margin: 0;
+
+    background-color: #f7f7f5;
+
+    color: #1d1d1f;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans KR",
+        Arial,
+        sans-serif;
+
 }
 
-h1 {
-    font-size: 48px;
-    color: #222;
+
+a {
+    color: inherit;
 }
 
-p {
-    font-size: 20px;
-    color: #666;
+
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    max-width: 1250px;
+
+    height: 90px;
+
+    margin: 0 auto;
+
+    padding: 0 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
 }
+
+
+.logo {
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-decoration: none;
+
+}
+
+
 nav {
-    position: absolute;
-    top: 30px;
-    right: 50px;
+
+    display: flex;
+
+    gap: 32px;
+
 }
+
 
 nav a {
-    margin-left: 30px;
+
+    font-size: 14px;
+
+    color: #555;
+
     text-decoration: none;
-    color: #333;
-    font-size: 16px;
+
+    transition: 0.2s;
+
 }
+
 
 nav a:hover {
-    color: #888;
-}
-.main {
-    margin-top: 120px;
+
+    color: #000;
+
 }
 
-.hello {
-    font-size: 18px;
-    color: #777;
-    margin-bottom: 10px;
+
+
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    max-width: 1150px;
+
+    min-height: calc(100vh - 90px);
+
+    margin: 0 auto;
+
+    padding: 70px 40px 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 100px;
+
 }
 
-.main h1 {
-    font-size: 60px;
+
+.hero-text {
+
+    flex: 1;
+
+}
+
+
+.hero-label {
+
+    margin-bottom: 25px;
+
+    color: #8a8a8a;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+}
+
+
+.hero h1 {
+
     margin: 0;
+
+    font-size: 78px;
+
+    font-weight: 700;
+
+    letter-spacing: -4px;
+
+    line-height: 1.1;
+
 }
 
-.intro {
-    font-size: 22px;
+
+.hero h2 {
+
+    margin: 18px 0 30px;
+
     color: #444;
-    margin-top: 20px;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
 }
 
-.description {
+
+.hero-description {
+
+    color: #666;
+
     font-size: 17px;
-    color: #888;
-    margin-top: 15px;
-}
-.buttons {
-    margin-top: 35px;
+
+    line-height: 1.9;
+
 }
 
-.btn {
+
+.hero-buttons {
+
+    margin-top: 38px;
+
+}
+
+
+.button {
+
     display: inline-block;
-    padding: 12px 24px;
-    margin: 0 6px;
-    border: 1px solid #333;
+
+    padding: 14px 24px;
+
+    margin-right: 8px;
+
+    border: 1px solid #222;
+
     border-radius: 8px;
+
+    font-size: 14px;
+
     text-decoration: none;
-    color: #333;
-    font-size: 15px;
-    transition: 0.3s;
+
+    transition: 0.2s;
+
 }
 
-.btn:hover {
-    background-color: #333;
+
+.button-dark {
+
+    background-color: #202020;
+
     color: white;
+
 }
 
-.primary {
-    background-color: #222;
-    color: white;
-}   
+
+.button-light {
+
+    background-color: transparent;
+
+    color: #222;
+
+}
+
+
+.button:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.75;
+
+}
+
+
+
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+
+    flex-shrink: 0;
+
+}
+
+
+.hero-image img {
+
+    width: 310px;
+
+    height: 410px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.10);
+
+}
+
+
+
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
 .section {
-    max-width: 800px;
-    margin: 300px auto 100px;
-    padding: 40px;
-    text-align: left;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 150px 40px;
+
+    border-top: 1px solid #dededb;
+
 }
+
+
+.section-heading {
+
+    display: flex;
+
+    gap: 35px;
+
+    margin-bottom: 65px;
+
+}
+
+
+.section-number {
+
+    margin: 6px 0 0;
+
+    color: #aaa;
+
+    font-size: 13px;
+
+}
+
+
+.section-label {
+
+    margin: 0;
+
+    color: #999;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+}
+
 
 .section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+
+    margin: 8px 0 0;
+
+    font-size: 46px;
+
+    letter-spacing: -2px;
+
 }
 
-.section p {
-    font-size: 18px;
-    line-height: 1.8;
+
+
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+
+    max-width: 760px;
+
+    margin-left: 48px;
+
+}
+
+
+.about-content p {
+
     color: #555;
-}
-.about-container {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+
+    font-size: 19px;
+
+    line-height: 2;
+
 }
 
-.profile-img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
+
+
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.card {
+
+    min-height: 260px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e8e5;
+
+    border-radius: 16px;
+
+    transition: 0.25s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.07);
+
+}
+
+
+.card-category {
+
+    color: #999;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.card h3 {
+
+    margin: 25px 0 20px;
+
+    font-size: 21px;
+
+}
+
+
+.card p {
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+
+
+
+/* =========================
+   STUDY
+========================= */
+
+.study-list {
+
+    border-top: 1px solid #ddd;
+
+}
+
+
+.study-item {
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+.study-item span {
+
+    color: #aaa;
+
+    font-size: 13px;
+
+}
+
+
+.study-item h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 22px;
+
+}
+
+
+.study-item p {
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+
+
+
+/* =========================
+   QISKIT
+========================= */
+
+.qiskit-section {
+
+    max-width: 1150px;
+
+}
+
+
+.qiskit-intro {
+
+    max-width: 650px;
+
+    margin-bottom: 45px;
+
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+.assignment-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.assignment-card {
+
+    min-height: 270px;
+
+    padding: 38px;
+
+    background: #1f1f1f;
+
+    color: white;
+
+    border-radius: 18px;
+
+    position: relative;
+
+    transition: 0.25s;
+
+}
+
+
+.assignment-card:hover {
+
+    transform: translateY(-6px);
+
+}
+
+
+.assignment-number {
+
+    color: #999;
+
+    font-size: 11px;
+
+    letter-spacing: 1.7px;
+
+}
+
+
+.assignment-card h3 {
+
+    margin: 27px 0 16px;
+
+    font-size: 25px;
+
+}
+
+
+.assignment-card > p:not(.assignment-number) {
+
+    color: #bcbcbc;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+.status {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 38px;
+
+    color: #888;
+
+    font-size: 12px;
+
+}
+
+
+
+
+
+/* =========================
+   HOBBY
+========================= */
+
+.hobby-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.hobby-item {
+
+    padding: 30px;
+
+    border-top: 2px solid #222;
+
+}
+
+
+.hobby-item h3 {
+
+    margin: 0 0 12px;
+
+    font-size: 20px;
+
+}
+
+
+.hobby-item p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+
+    max-width: 1050px;
+
+    min-height: 500px;
+
+    margin: 0 auto;
+
+    padding: 150px 40px;
+
+    border-top: 1px solid #ddd;
+
+    text-align: center;
+
+}
+
+
+.contact h2 {
+
+    margin: 15px 0;
+
+    font-size: 50px;
+
+    letter-spacing: -2px;
+
+}
+
+
+.contact > p:not(.section-label) {
+
+    color: #777;
+
+    font-size: 16px;
+
+}
+
+
+.back-top {
+
+    display: inline-block;
+
+    margin-top: 40px;
+
+    color: #333;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #333;
+
+    padding-bottom: 3px;
+
+}
+
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 30px 40px 50px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #ddd;
+
+    color: #999;
+
+    font-size: 12px;
+
+}
+
+
+
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    header {
+
+        height: auto;
+
+        padding: 30px;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+    }
+
+
+    nav {
+
+        gap: 16px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+        padding: 80px 30px 120px;
+
+        flex-direction: column-reverse;
+
+        gap: 50px;
+
+    }
+
+
+    .hero-text {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 58px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .hero-image img {
+
+        width: 260px;
+
+        height: 330px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .assignment-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hobby-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .about-content {
+
+        margin-left: 0;
+
+    }
+
+}
+
+
+
+
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .section {
+
+        padding: 100px 25px;
+
+    }
+
+
+    .section h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .study-item {
+
+        grid-template-columns: 50px 1fr;
+
+    }
+
+
+    .hobby-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .contact h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+    }
+
 }
