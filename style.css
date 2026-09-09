@@ -1,6 +1,6 @@
-/* ========================================
+/* ==================================================
    BASIC
-======================================== */
+================================================== */
 
 * {
     box-sizing: border-box;
@@ -12,8 +12,9 @@ html {
 
 body {
     margin: 0;
-    background-color: #f7f7f5;
-    color: #1d1d1f;
+
+    background: #f7f7f5;
+    color: #202020;
 
     font-family:
         -apple-system,
@@ -22,6 +23,8 @@ body {
         "Noto Sans KR",
         Arial,
         sans-serif;
+
+    word-break: keep-all;
 }
 
 a {
@@ -30,25 +33,30 @@ a {
 
 
 
-/* ========================================
+/* ==================================================
    HEADER
-======================================== */
+================================================== */
 
 header {
-    max-width: 1250px;
-    height: 86px;
+    width: calc(100% - 48px);
+    max-width: 1100px;
+
+    height: 72px;
 
     margin: 0 auto;
-    padding: 0 40px;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e3e3df;
 }
 
 .logo {
-    font-size: 15px;
-    font-weight: 700;
+    color: #222;
+
+    font-size: 14px;
+    font-weight: 750;
 
     letter-spacing: 3px;
 
@@ -57,13 +65,13 @@ header {
 
 nav {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 nav a {
-    color: #555;
+    color: #666;
 
-    font-size: 14px;
+    font-size: 13px;
 
     text-decoration: none;
 
@@ -71,93 +79,104 @@ nav a {
 }
 
 nav a:hover {
-    color: #000;
+    color: #111;
 }
 
 
 
-/* ========================================
+/* ==================================================
    HERO
-======================================== */
+================================================== */
 
 .hero {
-    max-width: 1100px;
+    width: calc(100% - 48px);
+    max-width: 1020px;
 
-    min-height: calc(100vh - 86px);
+    min-height: 570px;
 
     margin: 0 auto;
 
-    padding: 65px 40px 110px;
+    padding: 55px 0 70px;
 
     display: flex;
 
     align-items: center;
     justify-content: space-between;
 
-    gap: 90px;
+    gap: 65px;
 }
 
 .hero-text {
-    flex: 1;
+    max-width: 610px;
 }
 
 .hero-label {
-    margin: 0 0 22px;
+    margin: 0 0 18px;
 
     color: #999;
 
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 10px;
+    font-weight: 650;
 
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
 }
 
 .hero h1 {
     margin: 0;
 
-    font-size: 60px;
-    font-weight: 700;
+    color: #171717;
 
-    letter-spacing: -3px;
+    font-size: 52px;
+    font-weight: 750;
+
+    letter-spacing: -2.5px;
+
     line-height: 1.1;
 }
 
 .hero h2 {
-    margin: 18px 0 28px;
+    margin: 14px 0 20px;
 
     color: #444;
 
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 21px;
+    font-weight: 450;
 
     line-height: 1.45;
 }
 
+.hero h2 span {
+    color: #777;
+}
+
 .hero-description {
-    max-width: 600px;
+    max-width: 560px;
+
+    margin: 0;
 
     color: #666;
 
-    font-size: 16px;
+    font-size: 15px;
 
-    line-height: 1.9;
+    line-height: 1.8;
 }
 
 .hero-buttons {
-    margin-top: 35px;
+    margin-top: 28px;
 }
 
 .button {
     display: inline-block;
 
-    padding: 13px 22px;
+    padding: 11px 18px;
 
-    margin-right: 8px;
+    margin-right: 7px;
 
     border: 1px solid #222;
-    border-radius: 8px;
+    border-radius: 7px;
 
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 500;
 
     text-decoration: none;
 
@@ -165,161 +184,181 @@ nav a:hover {
 }
 
 .button-dark {
-    background-color: #202020;
-    color: white;
+    background: #202020;
+    color: #fff;
 }
 
 .button-light {
     background: transparent;
-    color: #222;
 }
 
 .button:hover {
     transform: translateY(-2px);
-    opacity: 0.75;
 }
 
 
 
-/* ========================================
+/* ==================================================
    PROFILE IMAGE
-======================================== */
+================================================== */
 
 .hero-image {
     flex-shrink: 0;
 }
 
 .hero-image img {
-    width: 235px;
-    height: 310px;
+    display: block;
+
+    width: 205px;
+    height: 275px;
 
     object-fit: cover;
 
-    border-radius: 20px;
+    border-radius: 16px;
 
     box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.09);
+        0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 
 
-/* ========================================
+/* ==================================================
    COMMON SECTION
-======================================== */
+================================================== */
 
 .section {
-    max-width: 1050px;
+    width: calc(100% - 48px);
+    max-width: 980px;
 
     margin: 0 auto;
 
-    padding: 140px 40px;
+    padding: 78px 0;
 
-    border-top: 1px solid #dededb;
+    border-top: 1px solid #dfdfdc;
 }
 
 .section-heading {
-    display: flex;
+    display: grid;
 
-    gap: 35px;
+    grid-template-columns: 32px 1fr;
 
-    margin-bottom: 60px;
+    gap: 14px;
+
+    margin-bottom: 35px;
 }
 
 .section-number {
-    margin: 6px 0 0;
+    padding-top: 5px;
 
     color: #aaa;
 
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .section-label {
-    margin: 0;
-
-    color: #999;
-
-    font-size: 11px;
-    font-weight: 600;
-
-    letter-spacing: 2px;
-}
-
-.section h2 {
-    margin: 8px 0 0;
-
-    font-size: 44px;
-
-    letter-spacing: -2px;
-}
-
-
-
-/* ========================================
-   ABOUT
-======================================== */
-
-.about-content {
-    max-width: 780px;
-
-    margin-left: 47px;
-}
-
-.about-content p {
-    color: #555;
-
-    font-size: 18px;
-
-    line-height: 2;
-}
-
-
-
-/* ========================================
-   EXPERIENCE TIMELINE
-======================================== */
-
-.timeline {
-    border-top: 1px solid #d9d9d6;
-}
-
-.timeline-item {
-    display: grid;
-
-    grid-template-columns: 220px 1fr;
-
-    gap: 45px;
-
-    padding: 40px 0;
-
-    border-bottom: 1px solid #d9d9d6;
-}
-
-.timeline-date {
-    padding-top: 7px;
-
-    color: #888;
-
-    font-size: 13px;
-
-    letter-spacing: 0.3px;
-}
-
-.timeline-type {
-    margin: 0 0 10px;
+    margin: 0 0 5px;
 
     color: #999;
 
     font-size: 10px;
     font-weight: 700;
 
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
+}
+
+.section h2 {
+    margin: 0;
+
+    color: #202020;
+
+    font-size: 36px;
+    font-weight: 720;
+
+    letter-spacing: -1.5px;
+}
+
+
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.about-content {
+    max-width: 760px;
+
+    padding-left: 46px;
+}
+
+.about-content p {
+    margin: 0 0 14px;
+
+    color: #555;
+
+    font-size: 16px;
+
+    line-height: 1.85;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/* ==================================================
+   EXPERIENCE
+================================================== */
+
+.timeline {
+    border-top: 1px solid #dededb;
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 190px 1fr;
+
+    gap: 35px;
+
+    padding: 25px 18px 25px 0;
+
+    border-bottom: 1px solid #dededb;
+
+    transition: 0.2s;
+}
+
+.timeline-item:hover {
+    background: rgba(0, 0, 0, 0.018);
+
+    padding-left: 10px;
+}
+
+.timeline-date {
+    padding-top: 4px;
+
+    color: #888;
+
+    font-size: 12px;
+}
+
+.timeline-type {
+    margin: 0 0 6px;
+
+    color: #999;
+
+    font-size: 9px;
+    font-weight: 750;
+
+    letter-spacing: 1.7px;
 }
 
 .timeline-content h3 {
-    margin: 0 0 9px;
+    margin: 0 0 5px;
 
-    font-size: 23px;
-    font-weight: 600;
+    color: #222;
+
+    font-size: 19px;
+    font-weight: 650;
 }
 
 .timeline-content > p:last-child {
@@ -327,42 +366,19 @@ nav a:hover {
 
     color: #666;
 
-    font-size: 15px;
+    font-size: 14px;
 
-    line-height: 1.7;
-}
-
-.timeline-item {
-    transition:
-        padding-left 0.2s,
-        background-color 0.2s;
-}
-
-.timeline-item:hover {
-    padding-left: 15px;
+    line-height: 1.65;
 }
 
 .timeline-current {
-    margin-top: 2px;
+    padding-left: 18px;
 
-    padding-left: 25px;
-
-    border-left: 3px solid #202020;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.025),
-            transparent
-        );
+    border-left: 3px solid #242424;
 }
 
 .timeline-current:hover {
-    padding-left: 35px;
-}
-
-.timeline-current h3 {
-    font-size: 26px;
+    padding-left: 25px;
 }
 
 .current-line {
@@ -370,56 +386,58 @@ nav a:hover {
 
     align-items: center;
 
-    gap: 10px;
+    gap: 8px;
 }
 
 .current-badge {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 
-    padding: 4px 8px;
+    padding: 3px 7px;
 
-    background: #202020;
-
-    color: white;
+    background: #242424;
+    color: #fff;
 
     border-radius: 20px;
 
-    font-size: 9px;
-    font-weight: 600;
+    font-size: 8px;
+    font-weight: 700;
 
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
 }
 
 
 
-/* ========================================
+/* ==================================================
    STUDY
-======================================== */
+================================================== */
 
 .study-list {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #dededb;
 }
 
 .study-item {
     display: grid;
 
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 65px 1fr;
 
-    padding: 35px 0;
+    padding: 24px 0;
 
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #dededb;
 }
 
-.study-item span {
+.study-number {
+    padding-top: 3px;
+
     color: #aaa;
 
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .study-item h3 {
-    margin: 0 0 10px;
+    margin: 0 0 6px;
 
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: 650;
 }
 
 .study-item p {
@@ -427,31 +445,27 @@ nav a:hover {
 
     color: #666;
 
-    font-size: 16px;
+    font-size: 14px;
 
-    line-height: 1.7;
+    line-height: 1.65;
 }
 
 
 
-/* ========================================
+/* ==================================================
    QISKIT
-======================================== */
-
-.qiskit-section {
-    max-width: 1150px;
-}
+================================================== */
 
 .qiskit-intro {
-    max-width: 650px;
+    max-width: 620px;
 
-    margin-bottom: 45px;
+    margin: -5px 0 27px 46px;
 
     color: #666;
 
-    font-size: 17px;
+    font-size: 14px;
 
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 .assignment-grid {
@@ -459,95 +473,104 @@ nav a:hover {
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 20px;
+    gap: 14px;
 }
 
 .assignment-card {
-    min-height: 270px;
+    min-height: 205px;
 
-    padding: 38px;
-
-    background: #1f1f1f;
-
-    color: white;
-
-    border-radius: 18px;
+    padding: 26px;
 
     position: relative;
 
+    background: #202020;
+    color: #fff;
+
+    border: 1px solid #202020;
+    border-radius: 13px;
+
     text-decoration: none;
 
-    transition: 0.25s;
+    transition: 0.22s;
 }
 
 .assignment-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-4px);
 
     box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.13);
+        0 12px 28px rgba(0, 0, 0, 0.09);
+}
+
+.assignment-card.active {
+    background: #181818;
 }
 
 .assignment-number {
-    color: #999;
+    margin: 0;
 
-    font-size: 11px;
+    color: #8e8e8e;
 
-    letter-spacing: 1.7px;
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
 }
 
 .assignment-card h3 {
-    margin: 27px 0 16px;
+    margin: 17px 0 9px;
 
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 620;
 }
 
 .assignment-card > p:not(.assignment-number) {
-    color: #bcbcbc;
+    margin: 0;
 
-    font-size: 15px;
+    color: #bdbdbd;
 
-    line-height: 1.8;
+    font-size: 13px;
+
+    line-height: 1.65;
 }
 
 .status {
     position: absolute;
 
-    bottom: 30px;
-    left: 38px;
+    left: 26px;
+    bottom: 22px;
 
-    color: #888;
+    color: #777;
 
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .active-status {
-    color: #e8e8e8;
+    color: #f0f0f0;
 }
 
 
 
-/* ========================================
+/* ==================================================
    HOBBY
-======================================== */
+================================================== */
 
 .hobby-grid {
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 15px;
+    gap: 12px;
 }
 
 .hobby-item {
-    padding: 30px;
+    padding: 20px 15px 10px;
 
     border-top: 2px solid #222;
 }
 
 .hobby-item h3 {
-    margin: 0 0 12px;
+    margin: 0 0 6px;
 
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .hobby-item p {
@@ -555,103 +578,100 @@ nav a:hover {
 
     color: #777;
 
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
 
-/* ========================================
+/* ==================================================
    CONTACT
-======================================== */
+================================================== */
 
 .contact {
-    max-width: 1050px;
-
-    min-height: 500px;
+    width: calc(100% - 48px);
+    max-width: 980px;
 
     margin: 0 auto;
 
-    padding: 150px 40px;
+    padding: 80px 0;
 
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #dfdfdc;
 
     text-align: center;
 }
 
 .contact h2 {
-    margin: 15px 0;
+    margin: 7px 0 10px;
 
-    font-size: 48px;
+    font-size: 37px;
 
-    letter-spacing: -2px;
+    letter-spacing: -1.5px;
 }
 
 .contact > p:not(.section-label) {
+    margin: 0;
+
     color: #777;
 
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .back-top {
     display: inline-block;
 
-    margin-top: 40px;
-
-    padding-bottom: 3px;
+    margin-top: 25px;
+    padding-bottom: 2px;
 
     border-bottom: 1px solid #333;
 
     color: #333;
 
-    font-size: 14px;
+    font-size: 12px;
 
     text-decoration: none;
 }
 
 
 
-/* ========================================
+/* ==================================================
    FOOTER
-======================================== */
+================================================== */
 
 footer {
-    max-width: 1150px;
+    width: calc(100% - 48px);
+    max-width: 980px;
 
     margin: 0 auto;
 
-    padding: 30px 40px 50px;
+    padding: 22px 0 35px;
 
     display: flex;
-
     justify-content: space-between;
 
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #dfdfdc;
 
     color: #999;
 
-    font-size: 12px;
+    font-size: 10px;
 }
 
 
 
-/* ========================================
+/* ==================================================
    ASSIGNMENT PAGE
-======================================== */
-
-.assignment-page {
-    background: #f7f7f5;
-}
+================================================== */
 
 .assignment-container {
-    max-width: 950px;
+    width: calc(100% - 48px);
+    max-width: 820px;
 
     margin: 0 auto;
 
-    padding: 80px 40px 140px;
+    padding: 45px 0 80px;
 }
 
 .assignment-header {
-    padding: 70px 0 90px;
+    padding: 35px 0 50px;
 
     border-bottom: 1px solid #ddd;
 }
@@ -659,11 +679,11 @@ footer {
 .assignment-back {
     display: inline-block;
 
-    margin-bottom: 55px;
+    margin-bottom: 35px;
 
     color: #777;
 
-    font-size: 14px;
+    font-size: 12px;
 
     text-decoration: none;
 }
@@ -673,100 +693,109 @@ footer {
 }
 
 .assignment-page-label {
+    margin: 0 0 9px;
+
     color: #999;
 
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 10px;
+    font-weight: 700;
 
-    letter-spacing: 2px;
+    letter-spacing: 1.7px;
 }
 
 .assignment-header h1 {
-    margin: 15px 0 20px;
+    margin: 0 0 13px;
 
-    font-size: 56px;
+    font-size: 45px;
 
-    letter-spacing: -3px;
+    letter-spacing: -2px;
 }
 
 .assignment-subtitle {
-    max-width: 700px;
+    max-width: 650px;
+
+    margin: 0;
 
     color: #666;
 
-    font-size: 18px;
+    font-size: 15px;
 
-    line-height: 1.8;
+    line-height: 1.75;
 }
 
 .assignment-content {
-    padding: 80px 0;
+    padding: 48px 0;
 
     border-bottom: 1px solid #ddd;
 }
 
 .content-number {
+    margin: 0 0 5px;
+
     color: #aaa;
 
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .assignment-content h2 {
-    margin: 10px 0 30px;
+    margin: 0 0 20px;
 
-    font-size: 35px;
+    font-size: 27px;
+
+    letter-spacing: -0.8px;
 }
 
 .assignment-content > p:not(.content-number) {
-    max-width: 760px;
+    max-width: 720px;
+
+    margin: 0 0 15px;
 
     color: #555;
 
-    font-size: 17px;
+    font-size: 15px;
 
-    line-height: 2;
+    line-height: 1.8;
 }
 
 .formula-box {
-    max-width: 650px;
+    max-width: 560px;
 
-    margin: 30px 0;
+    margin: 20px 0;
 
-    padding: 25px;
+    padding: 19px;
 
-    background: white;
+    background: #fff;
 
     border: 1px solid #ddd;
-    border-radius: 12px;
-
-    text-align: center;
+    border-radius: 10px;
 
     font-family: Georgia, serif;
 
-    font-size: 23px;
+    font-size: 20px;
+
+    text-align: center;
 }
 
 .code-block {
-    margin-top: 30px;
+    margin: 20px 0 0;
 
-    padding: 30px;
+    padding: 23px;
 
     overflow-x: auto;
 
-    background: #1f1f1f;
-
+    background: #202020;
     color: #eee;
 
-    border-radius: 15px;
+    border-radius: 11px;
 
     font-family:
         Consolas,
         "Courier New",
         monospace;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 .result-grid {
@@ -774,41 +803,42 @@ footer {
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 20px;
+    gap: 12px;
 
-    max-width: 600px;
+    max-width: 500px;
 
-    margin-top: 40px;
+    margin-top: 22px;
 }
 
 .result-card {
-    padding: 30px;
+    padding: 22px;
 
     background: #202020;
+    color: #fff;
 
-    color: white;
-
-    border-radius: 15px;
+    border-radius: 11px;
 }
 
 .result-card span {
     color: #999;
 
-    font-size: 11px;
+    font-size: 9px;
 }
 
 .result-card strong {
     display: block;
 
-    margin: 18px 0 5px;
+    margin: 12px 0 3px;
 
-    font-size: 38px;
+    font-size: 30px;
 }
 
 .result-card p {
     margin: 0;
 
     color: #bbb;
+
+    font-size: 13px;
 }
 
 .assignment-navigation {
@@ -816,9 +846,11 @@ footer {
 
     justify-content: space-between;
 
-    padding-top: 60px;
+    padding-top: 35px;
 
     color: #777;
+
+    font-size: 12px;
 }
 
 .assignment-navigation a {
@@ -833,112 +865,125 @@ footer {
 
 
 
-/* ========================================
+/* ==================================================
    TABLET
-======================================== */
+================================================== */
 
-@media (max-width: 850px) {
+@media (max-width: 800px) {
 
     header {
+        width: calc(100% - 36px);
+
         height: auto;
 
-        padding: 30px;
+        padding: 22px 0;
 
         flex-direction: column;
 
-        gap: 25px;
+        gap: 16px;
     }
 
     nav {
-        gap: 16px;
+        justify-content: center;
 
         flex-wrap: wrap;
 
-        justify-content: center;
+        gap: 14px 20px;
     }
 
     .hero {
+        width: calc(100% - 40px);
+
         min-height: auto;
 
-        padding: 70px 30px 110px;
+        padding: 50px 0 65px;
 
         flex-direction: column-reverse;
 
-        gap: 45px;
+        gap: 35px;
     }
 
     .hero-text {
-        width: 100%;
-
         text-align: center;
     }
 
     .hero h1 {
-        font-size: 52px;
+        font-size: 46px;
     }
 
     .hero h2 {
-        font-size: 21px;
+        font-size: 19px;
     }
 
     .hero-image img {
-        width: 210px;
-        height: 275px;
+        width: 180px;
+        height: 235px;
+    }
+
+    .section {
+        width: calc(100% - 40px);
+
+        padding: 65px 0;
     }
 
     .about-content {
-        margin-left: 0;
+        padding-left: 0;
     }
 
     .timeline-item {
-        grid-template-columns: 170px 1fr;
+        grid-template-columns: 155px 1fr;
 
         gap: 25px;
     }
 
-    .assignment-grid {
-        grid-template-columns: 1fr;
+    .qiskit-intro {
+        margin-left: 0;
     }
 
     .hobby-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 
 
-/* ========================================
+/* ==================================================
    MOBILE
-======================================== */
+================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 550px) {
+
+    nav {
+        font-size: 12px;
+    }
 
     .hero h1 {
-        font-size: 46px;
+        font-size: 41px;
     }
 
     .hero-label {
         line-height: 1.7;
     }
 
+    .hero-description {
+        font-size: 14px;
+    }
+
     .section {
-        padding: 100px 25px;
+        padding: 55px 0;
     }
 
     .section h2 {
-        font-size: 37px;
-    }
-
-    .section-heading {
-        gap: 20px;
+        font-size: 32px;
     }
 
     .timeline-item {
         grid-template-columns: 1fr;
 
-        gap: 15px;
+        gap: 10px;
 
-        padding: 30px 0;
+        padding: 21px 0;
     }
 
     .timeline-item:hover {
@@ -946,48 +991,61 @@ footer {
     }
 
     .timeline-current {
-        padding-left: 18px;
+        padding-left: 13px;
     }
 
     .timeline-current:hover {
-        padding-left: 18px;
+        padding-left: 13px;
     }
 
-    .study-item {
-        grid-template-columns: 50px 1fr;
-    }
-
-    .hobby-grid {
+    .assignment-grid {
         grid-template-columns: 1fr;
     }
 
+    .study-item {
+        grid-template-columns: 42px 1fr;
+    }
+
+    .hobby-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact {
+        width: calc(100% - 40px);
+
+        padding: 60px 0;
+    }
+
     .contact h2 {
-        font-size: 38px;
+        font-size: 31px;
     }
 
     footer {
+        width: calc(100% - 40px);
+
         flex-direction: column;
 
-        gap: 5px;
+        gap: 2px;
     }
 
     .assignment-container {
-        padding: 40px 25px 100px;
+        width: calc(100% - 40px);
+
+        padding-top: 25px;
+    }
+
+    .assignment-header {
+        padding: 25px 0 38px;
     }
 
     .assignment-header h1 {
-        font-size: 43px;
+        font-size: 36px;
     }
 
     .assignment-content {
-        padding: 65px 0;
-    }
-
-    .assignment-content h2 {
-        font-size: 30px;
+        padding: 38px 0;
     }
 
     .result-grid {
         grid-template-columns: 1fr;
     }
-}
