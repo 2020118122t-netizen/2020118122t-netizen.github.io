@@ -924,3 +924,132 @@ footer {
 .assignment-card {
     text-decoration: none;
 }
+/* =========================
+   ASSIGNMENT PAGE
+========================= */
+
+.assignment-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 80px 40px 140px;
+}
+
+.assignment-header {
+    padding: 70px 0 90px;
+    border-bottom: 1px solid #ddd;
+}
+
+.assignment-back {
+    display: inline-block;
+    margin-bottom: 55px;
+    color: #777;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.assignment-page-label {
+    color: #999;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.assignment-header h1 {
+    margin: 15px 0 20px;
+    font-size: 60px;
+    letter-spacing: -3px;
+}
+
+.assignment-subtitle {
+    max-width: 700px;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.assignment-content {
+    padding: 80px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-number {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.assignment-content h2 {
+    margin: 10px 0 30px;
+    font-size: 35px;
+}
+
+.assignment-content > p:not(.content-number) {
+    max-width: 760px;
+    color: #555;
+    font-size: 17px;
+    line-height: 2;
+}
+
+.formula-box {
+    max-width: 650px;
+    margin: 30px 0;
+    padding: 25px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 23px;
+}
+
+.code-block {
+    margin-top: 30px;
+    padding: 30px;
+    overflow-x: auto;
+    background: #1f1f1f;
+    color: #eee;
+    border-radius: 15px;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+.result-card {
+    padding: 30px;
+    background: #202020;
+    color: white;
+    border-radius: 15px;
+}
+
+.result-card span {
+    color: #999;
+    font-size: 11px;
+}
+
+.result-card strong {
+    display: block;
+    margin: 18px 0 5px;
+    font-size: 38px;
+}
+
+.assignment-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    color: #777;
+}
+
+.assignment-navigation a {
+    color: #333;
+    text-decoration: none;
+}
+
+.assignment-card {
+    text-decoration: none;
+}
