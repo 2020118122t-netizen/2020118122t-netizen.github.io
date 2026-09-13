@@ -16,21 +16,21 @@
 
     <div class="header-inner">
 
-        <div class="logo">
+        <a href="#" class="logo">
             SEUNGWON
-        </div>
+        </a>
 
-        <div class="profile-mini">
+        <div class="mini-profile">
+
+            <div class="mini-profile-text">
+                <strong>Seungwon Lee</strong>
+                <span>Graduate Student</span>
+            </div>
 
             <img
                 src="images/profile.jpg"
                 alt="Seungwon Lee"
             >
-
-            <div class="profile-info">
-                <strong>Seungwon Lee</strong>
-                <span>Graduate Student</span>
-            </div>
 
         </div>
 
@@ -41,156 +41,168 @@
 
 <main>
 
-<section class="hero">
+    <!-- HERO -->
 
-    <div class="container">
+    <section class="hero">
 
-        <p class="eyebrow">
-            QUANTUM COMPUTING
-        </p>
+        <div class="container">
 
-        <h1>
-            Qiskit<br>
-            Assignment Archive
-        </h1>
+            <div class="hero-badge">
+                QUANTUM COMPUTING · 2026
+            </div>
 
-        <p class="hero-description">
-            Quantum Computing 수업의 Qiskit 과제를 정리하는 페이지입니다.
-        </p>
+            <h1>
+                Qiskit<br>
+                Assignment Archive
+            </h1>
 
-    </div>
-
-</section>
-
-
-<section class="assignments">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>ASSIGNMENTS</span>
-
-            <h2>
-                Course Work
-            </h2>
+            <p class="hero-description">
+                Quantum Computing 수업의 Qiskit 과제를 정리하는 페이지입니다.
+            </p>
 
         </div>
 
+    </section>
 
-        <div class="assignment-list">
 
+    <!-- ASSIGNMENTS -->
 
-            <!-- Assignment 01 -->
+    <section class="assignments">
 
-            <article class="assignment-card active">
+        <div class="container">
 
-                <div class="assignment-top">
+            <div class="section-title">
 
-                    <span class="assignment-number">
-                        Assignment 01
-                    </span>
-
-                    <span class="status open">
-                        OPEN
-                    </span>
-
+                <div>
+                    <p>COURSE WORK</p>
+                    <h2>Assignments</h2>
                 </div>
 
+                <span>
+                    01 — 03
+                </span>
 
-                <div class="assignment-content">
-
-                    <h3>
-                        Qiskit 사용해보기
-                    </h3>
-
-                    <p class="due-date">
-                        Due Date : 09.14 오전
-                    </p>
-
-                </div>
+            </div>
 
 
-                <!--
-                아래 href에 본인의 실제 Qiskit URL을 넣으면 됨.
-                예:
-                href="https://quantum.ibm.com/..."
-                -->
-
-                <a
-                    href="YOUR_QISKIT_URL"
-                    target="_blank"
-                    class="qiskit-button"
-                >
-                    Open Qiskit Assignment →
-                </a>
-
-            </article>
+            <div class="assignment-grid">
 
 
+                <!-- ASSIGNMENT 01 -->
 
-            <!-- Assignment 02 -->
+                <article class="assignment-card active">
 
-            <article class="assignment-card upcoming">
+                    <div class="card-header">
 
-                <div class="assignment-top">
+                        <span class="number">
+                            01
+                        </span>
 
-                    <span class="assignment-number">
-                        Assignment 02
-                    </span>
+                        <span class="status open">
+                            OPEN
+                        </span>
 
-                    <span class="status soon">
-                        SOON
-                    </span>
-
-                </div>
-
-
-                <div class="assignment-content">
-
-                    <h3>
-                        To be soon
-                    </h3>
-
-                </div>
-
-            </article>
+                    </div>
 
 
+                    <div class="card-body">
 
-            <!-- Assignment 03 -->
+                        <p class="assignment-label">
+                            ASSIGNMENT 01
+                        </p>
 
-            <article class="assignment-card upcoming">
+                        <h3>
+                            Qiskit 사용해보기
+                        </h3>
 
-                <div class="assignment-top">
+                        <p class="due">
+                            Due Date · 09.14 오전
+                        </p>
 
-                    <span class="assignment-number">
-                        Assignment 03
-                    </span>
-
-                    <span class="status soon">
-                        SOON
-                    </span>
-
-                </div>
+                    </div>
 
 
-                <div class="assignment-content">
+                    <a
+                        href="YOUR_QISKIT_URL"
+                        target="_blank"
+                        class="assignment-link"
+                    >
+                        Open Assignment
+                        <span>↗</span>
+                    </a>
 
-                    <h3>
-                        To be soon
-                    </h3>
+                </article>
 
-                </div>
 
-            </article>
+                <!-- ASSIGNMENT 02 -->
 
+                <article class="assignment-card">
+
+                    <div class="card-header">
+
+                        <span class="number">
+                            02
+                        </span>
+
+                        <span class="status">
+                            SOON
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <p class="assignment-label">
+                            ASSIGNMENT 02
+                        </p>
+
+                        <h3>
+                            To be soon
+                        </h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ASSIGNMENT 03 -->
+
+                <article class="assignment-card">
+
+                    <div class="card-header">
+
+                        <span class="number">
+                            03
+                        </span>
+
+                        <span class="status">
+                            SOON
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <p class="assignment-label">
+                            ASSIGNMENT 03
+                        </p>
+
+                        <h3>
+                            To be soon
+                        </h3>
+
+                    </div>
+
+                </article>
+
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 </main>
 
@@ -212,5 +224,4 @@
 </footer>
 
 </body>
-
 </html>
