@@ -5,32 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Seungwon Lee | Personal Workspace</title>
-
-    <meta
-        name="description"
-        content="Seungwon Lee - Qiskit, Company Projects and Schedule"
-    >
+    <title>Seungwon Lee | Qiskit Assignment</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
 
     <div class="header-inner">
 
-        <a href="#home" class="logo">
+        <div class="logo">
             SEUNGWON
-        </a>
+        </div>
 
-        <nav class="nav">
-            <a href="#qiskit">Qiskit</a>
-            <a href="#projects">Projects</a>
-            <a href="#schedule">Schedule</a>
-        </nav>
+        <div class="profile-mini">
+
+            <img
+                src="images/profile.jpg"
+                alt="Seungwon Lee"
+            >
+
+            <div class="profile-info">
+                <strong>Seungwon Lee</strong>
+                <span>Graduate Student</span>
+            </div>
+
+        </div>
 
     </div>
 
@@ -39,381 +41,151 @@
 
 <main>
 
-<!-- =========================
-     HOME
-========================= -->
-
-<section id="home" class="hero">
+<section class="hero">
 
     <div class="container">
 
-        <div class="hero-grid">
+        <p class="eyebrow">
+            QUANTUM COMPUTING
+        </p>
 
-            <div class="hero-content">
+        <h1>
+            Qiskit<br>
+            Assignment Archive
+        </h1>
 
-                <p class="eyebrow">
-                    PERSONAL WORKSPACE · 2026
-                </p>
+        <p class="hero-description">
+            Quantum Computing 수업의 Qiskit 과제를 정리하는 페이지입니다.
+        </p>
 
-                <h1>
-                    Seungwon Lee
-                </h1>
+    </div>
 
-                <p class="hero-role">
-                    Quality Assurance · Graduate Study
-                </p>
+</section>
 
-                <p class="hero-description">
-                    품질보증 업무와 대학원 공부를 병행하며
-                    Quantum Computing, QA Automation,
-                    Engineering 분야의 학습과 프로젝트를 기록합니다.
-                </p>
 
-                <div class="hero-buttons">
+<section class="assignments">
 
-                    <a href="#qiskit" class="btn btn-dark">
-                        Qiskit
-                    </a>
+    <div class="container">
 
-                    <a href="#projects" class="btn btn-light">
-                        Projects
-                    </a>
+        <div class="section-heading">
+
+            <span>ASSIGNMENTS</span>
+
+            <h2>
+                Course Work
+            </h2>
+
+        </div>
+
+
+        <div class="assignment-list">
+
+
+            <!-- Assignment 01 -->
+
+            <article class="assignment-card active">
+
+                <div class="assignment-top">
+
+                    <span class="assignment-number">
+                        Assignment 01
+                    </span>
+
+                    <span class="status open">
+                        OPEN
+                    </span>
 
                 </div>
 
-            </div>
+
+                <div class="assignment-content">
+
+                    <h3>
+                        Qiskit 사용해보기
+                    </h3>
+
+                    <p class="due-date">
+                        Due Date : 09.14 오전
+                    </p>
+
+                </div>
 
 
-            <!-- 작은 프로필 사진 -->
-            <div class="profile-card">
+                <!--
+                아래 href에 본인의 실제 Qiskit URL을 넣으면 됨.
+                예:
+                href="https://quantum.ibm.com/..."
+                -->
 
-                <img
-                    src="images/profile.jpg"
-                    alt="Seungwon Lee"
-                    class="profile-image"
+                <a
+                    href="YOUR_QISKIT_URL"
+                    target="_blank"
+                    class="qiskit-button"
                 >
-
-                <div>
-                    <strong>이승원</strong>
-                    <span>QA · Engineering · Quantum</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     OVERVIEW
-========================= -->
-
-<section class="overview">
-
-    <div class="container">
-
-        <div class="overview-grid">
-
-            <div class="overview-item">
-                <span>01</span>
-
-                <div>
-                    <small>STUDY</small>
-                    <strong>Quantum Computing</strong>
-                </div>
-            </div>
-
-
-            <div class="overview-item">
-                <span>02</span>
-
-                <div>
-                    <small>WORK</small>
-                    <strong>Quality Assurance</strong>
-                </div>
-            </div>
-
-
-            <div class="overview-item">
-                <span>03</span>
-
-                <div>
-                    <small>FOCUS</small>
-                    <strong>Automation & Research</strong>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     QISKIT
-========================= -->
-
-<section id="qiskit" class="section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div class="section-index">
-                01
-            </div>
-
-            <div>
-
-                <p class="section-label">
-                    QUANTUM COMPUTING
-                </p>
-
-                <h2>Qiskit</h2>
-
-                <p class="section-description">
-                    Qiskit 프로그램 실행 결과와 양자컴퓨팅 학습 내용을
-                    데이터 파일에서 자동으로 불러옵니다.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!--
-        중요:
-        Qiskit 카드는 여기 안에 직접 쓰지 않음.
-        app.js가 data/qiskit.json을 읽어서 자동 생성함.
-        -->
-
-        <div
-            id="qiskit-container"
-            class="qiskit-grid"
-        >
-            <p class="loading-text">
-                Qiskit 데이터를 불러오는 중...
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PROJECTS
-========================= -->
-
-<section id="projects" class="section section-alt">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div class="section-index">
-                02
-            </div>
-
-            <div>
-
-                <p class="section-label">
-                    WORK & DEVELOPMENT
-                </p>
-
-                <h2>Projects</h2>
-
-                <p class="section-description">
-                    현재 수행하거나 공부하고 있는 프로젝트를
-                    공개 가능한 범위에서 정리합니다.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="project-list">
-
-            <!-- CTRF -->
-            <article class="project-item">
-
-                <div class="project-index">
-                    01
-                </div>
-
-                <div class="project-main">
-
-                    <p class="project-category">
-                        NUCLEAR PROJECT
-                    </p>
-
-                    <h3>
-                        Romania CTRF Project
-                    </h3>
-
-                    <p>
-                        프로젝트의 품질보증 체계와 관련 내용을
-                        개인 학습 관점에서 정리합니다.
-                    </p>
-
-                    <div class="tag-list">
-                        <span>QA</span>
-                        <span>Procedure</span>
-                        <span>Audit</span>
-                    </div>
-
-                </div>
-
-                <span class="project-state">
-                    IN PROGRESS
-                </span>
+                    Open Qiskit Assignment →
+                </a>
 
             </article>
 
 
-            <!-- DUKOVANY -->
-            <article class="project-item">
 
-                <div class="project-index">
-                    02
+            <!-- Assignment 02 -->
+
+            <article class="assignment-card upcoming">
+
+                <div class="assignment-top">
+
+                    <span class="assignment-number">
+                        Assignment 02
+                    </span>
+
+                    <span class="status soon">
+                        SOON
+                    </span>
+
                 </div>
 
-                <div class="project-main">
 
-                    <p class="project-category">
-                        NUCLEAR PROJECT
-                    </p>
+                <div class="assignment-content">
 
                     <h3>
-                        Dukovany 5 & 6 Project
+                        To be soon
                     </h3>
 
-                    <p>
-                        프로젝트 구조와 품질보증,
-                        설계 품질관리 관련 내용을 정리합니다.
-                    </p>
-
-                    <div class="tag-list">
-                        <span>Quality</span>
-                        <span>Engineering</span>
-                        <span>APR1000</span>
-                    </div>
-
                 </div>
-
-                <span class="project-state">
-                    IN PROGRESS
-                </span>
 
             </article>
 
 
-            <!-- QA AUTOMATION -->
-            <article class="project-item">
 
-                <div class="project-index">
-                    03
+            <!-- Assignment 03 -->
+
+            <article class="assignment-card upcoming">
+
+                <div class="assignment-top">
+
+                    <span class="assignment-number">
+                        Assignment 03
+                    </span>
+
+                    <span class="status soon">
+                        SOON
+                    </span>
+
                 </div>
 
-                <div class="project-main">
 
-                    <p class="project-category">
-                        QA SYSTEM
-                    </p>
+                <div class="assignment-content">
 
                     <h3>
-                        QA Automation & AI
+                        To be soon
                     </h3>
 
-                    <p>
-                        상위·하위 문서 간 정합성 검토,
-                        변경사항 탐지와 품질업무 자동화를 위한
-                        시스템을 개발합니다.
-                    </p>
-
-                    <div class="tag-list">
-                        <span>Python</span>
-                        <span>Streamlit</span>
-                        <span>AI</span>
-                    </div>
-
                 </div>
-
-                <span class="project-state project-state-blue">
-                    PROTOTYPE
-                </span>
 
             </article>
 
-        </div>
 
-
-        <div class="notice">
-
-            <strong>NOTICE</strong>
-
-            <p>
-                회사 프로젝트는 공개 가능한 정보만 기록하며,
-                내부 문서·설계자료·데이터 및 보안자료는 게시하지 않습니다.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     SCHEDULE
-========================= -->
-
-<section id="schedule" class="section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div class="section-index">
-                03
-            </div>
-
-            <div>
-
-                <p class="section-label">
-                    ROADMAP · PLAN
-                </p>
-
-                <h2>Schedule</h2>
-
-                <p class="section-description">
-                    schedule.json에 일정만 입력하면
-                    이곳에 자동으로 표시됩니다.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!--
-        중요:
-        일정도 HTML에 직접 작성하지 않음.
-        app.js가 schedule.json을 읽어서 생성함.
-        -->
-
-        <div
-            id="schedule-container"
-            class="schedule-list"
-        >
-            <p class="loading-text">
-                일정을 불러오는 중...
-            </p>
         </div>
 
     </div>
@@ -423,27 +195,21 @@
 </main>
 
 
-<!-- FOOTER -->
-
 <footer class="footer">
 
     <div class="container footer-inner">
 
-        <p>
+        <span>
             © 2026 Seungwon Lee
-        </p>
+        </span>
 
-        <a href="#home">
-            Back to Top ↑
-        </a>
+        <span>
+            Quantum Computing · Qiskit
+        </span>
 
     </div>
 
 </footer>
-
-
-<!-- 반드시 필요 -->
-<script src="app.js"></script>
 
 </body>
 
