@@ -15,14 +15,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<script src="app.js"></script>
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
+<!-- HEADER -->
 <header class="header">
 
     <div class="header-inner">
@@ -42,9 +37,7 @@
 </header>
 
 
-
 <main>
-
 
 <!-- =========================
      HOME
@@ -56,8 +49,6 @@
 
         <div class="hero-grid">
 
-
-            <!-- 왼쪽 -->
             <div class="hero-content">
 
                 <p class="eyebrow">
@@ -69,7 +60,7 @@
                 </h1>
 
                 <p class="hero-role">
-                    Quality Assurance Engineer · Graduate Student
+                    Quality Assurance · Graduate Study
                 </p>
 
                 <p class="hero-description">
@@ -78,15 +69,14 @@
                     Engineering 분야의 학습과 프로젝트를 기록합니다.
                 </p>
 
-
                 <div class="hero-buttons">
 
                     <a href="#qiskit" class="btn btn-dark">
-                        Qiskit 보기
+                        Qiskit
                     </a>
 
                     <a href="#projects" class="btn btn-light">
-                        Projects 보기
+                        Projects
                     </a>
 
                 </div>
@@ -94,27 +84,21 @@
             </div>
 
 
-            <!-- 오른쪽 -->
-            <div class="profile-area">
+            <!-- 작은 프로필 사진 -->
+            <div class="profile-card">
 
                 <img
-                    src="profile.jpg"
+                    src="images/profile.jpg"
                     alt="Seungwon Lee"
                     class="profile-image"
                 >
 
-                <div class="profile-text">
-
+                <div>
                     <strong>이승원</strong>
-
-                    <span>
-                        QA · Engineering · Quantum
-                    </span>
-
+                    <span>QA · Engineering · Quantum</span>
                 </div>
 
             </div>
-
 
         </div>
 
@@ -123,9 +107,8 @@
 </section>
 
 
-
 <!-- =========================
-     QUICK OVERVIEW
+     OVERVIEW
 ========================= -->
 
 <section class="overview">
@@ -134,55 +117,40 @@
 
         <div class="overview-grid">
 
-
             <div class="overview-item">
-
-                <span class="overview-number">
-                    01
-                </span>
+                <span>01</span>
 
                 <div>
-                    <p>STUDY</p>
+                    <small>STUDY</small>
                     <strong>Quantum Computing</strong>
                 </div>
-
             </div>
 
 
             <div class="overview-item">
-
-                <span class="overview-number">
-                    02
-                </span>
+                <span>02</span>
 
                 <div>
-                    <p>WORK</p>
+                    <small>WORK</small>
                     <strong>Quality Assurance</strong>
                 </div>
-
             </div>
 
 
             <div class="overview-item">
-
-                <span class="overview-number">
-                    03
-                </span>
+                <span>03</span>
 
                 <div>
-                    <p>FOCUS</p>
+                    <small>FOCUS</small>
                     <strong>Automation & Research</strong>
                 </div>
-
             </div>
-
 
         </div>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -193,13 +161,11 @@
 
     <div class="container">
 
-
         <div class="section-header">
 
             <div class="section-index">
                 01
             </div>
-
 
             <div>
 
@@ -207,13 +173,11 @@
                     QUANTUM COMPUTING
                 </p>
 
-                <h2>
-                    Qiskit
-                </h2>
+                <h2>Qiskit</h2>
 
                 <p class="section-description">
-                    대학원 수업에서 학습한 양자컴퓨팅 이론과
-                    Qiskit 실습 내용을 순서대로 정리합니다.
+                    Qiskit 프로그램 실행 결과와 양자컴퓨팅 학습 내용을
+                    데이터 파일에서 자동으로 불러옵니다.
                 </p>
 
             </div>
@@ -221,9 +185,24 @@
         </div>
 
 
+        <!--
+        중요:
+        Qiskit 카드는 여기 안에 직접 쓰지 않음.
+        app.js가 data/qiskit.json을 읽어서 자동 생성함.
+        -->
 
-        <<div id="qiskit-container" class="qiskit-grid"></div>
+        <div
+            id="qiskit-container"
+            class="qiskit-grid"
+        >
+            <p class="loading-text">
+                Qiskit 데이터를 불러오는 중...
+            </p>
+        </div>
 
+    </div>
+
+</section>
 
 
 <!-- =========================
@@ -234,13 +213,11 @@
 
     <div class="container">
 
-
         <div class="section-header">
 
             <div class="section-index">
                 02
             </div>
-
 
             <div>
 
@@ -248,13 +225,11 @@
                     WORK & DEVELOPMENT
                 </p>
 
-                <h2>
-                    Projects
-                </h2>
+                <h2>Projects</h2>
 
                 <p class="section-description">
-                    현재 수행 중인 업무와 개인적으로 개발하는
-                    QA 관련 프로젝트를 공개 가능한 범위에서 기록합니다.
+                    현재 수행하거나 공부하고 있는 프로젝트를
+                    공개 가능한 범위에서 정리합니다.
                 </p>
 
             </div>
@@ -262,18 +237,14 @@
         </div>
 
 
-
         <div class="project-list">
 
-
             <!-- CTRF -->
-
             <article class="project-item">
 
                 <div class="project-index">
                     01
                 </div>
-
 
                 <div class="project-main">
 
@@ -286,38 +257,31 @@
                     </h3>
 
                     <p>
-                        프로젝트 품질보증 체계와 관련 업무를
+                        프로젝트의 품질보증 체계와 관련 내용을
                         개인 학습 관점에서 정리합니다.
                     </p>
 
-
                     <div class="tag-list">
-
                         <span>QA</span>
                         <span>Procedure</span>
                         <span>Audit</span>
-
                     </div>
 
                 </div>
 
-
-                <div class="project-state">
+                <span class="project-state">
                     IN PROGRESS
-                </div>
+                </span>
 
             </article>
 
 
-
-            <!-- DKN -->
-
+            <!-- DUKOVANY -->
             <article class="project-item">
 
                 <div class="project-index">
                     02
                 </div>
-
 
                 <div class="project-main">
 
@@ -330,38 +294,31 @@
                     </h3>
 
                     <p>
-                        프로젝트 구조와 품질보증 및
+                        프로젝트 구조와 품질보증,
                         설계 품질관리 관련 내용을 정리합니다.
                     </p>
 
-
                     <div class="tag-list">
-
                         <span>Quality</span>
                         <span>Engineering</span>
                         <span>APR1000</span>
-
                     </div>
 
                 </div>
 
-
-                <div class="project-state">
+                <span class="project-state">
                     IN PROGRESS
-                </div>
+                </span>
 
             </article>
 
 
-
-            <!-- QA SYSTEM -->
-
+            <!-- QA AUTOMATION -->
             <article class="project-item">
 
                 <div class="project-index">
                     03
                 </div>
-
 
                 <div class="project-main">
 
@@ -375,49 +332,41 @@
 
                     <p>
                         상위·하위 문서 간 정합성 검토,
-                        변경사항 탐지 및 반복 품질업무 자동화를 위한
+                        변경사항 탐지와 품질업무 자동화를 위한
                         시스템을 개발합니다.
                     </p>
 
-
                     <div class="tag-list">
-
                         <span>Python</span>
                         <span>Streamlit</span>
                         <span>AI</span>
-
                     </div>
 
                 </div>
 
-
-                <div class="project-state project-state-blue">
+                <span class="project-state project-state-blue">
                     PROTOTYPE
-                </div>
+                </span>
 
             </article>
-
 
         </div>
 
 
-
-        <div class="security-note">
+        <div class="notice">
 
             <strong>NOTICE</strong>
 
             <p>
-                회사 프로젝트는 공개 가능한 정보만 기록하며
-                내부 문서, 설계자료, 데이터 및 보안자료는 게시하지 않습니다.
+                회사 프로젝트는 공개 가능한 정보만 기록하며,
+                내부 문서·설계자료·데이터 및 보안자료는 게시하지 않습니다.
             </p>
 
         </div>
 
-
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -426,16 +375,55 @@
 
 <section id="schedule" class="section">
 
-    <div id="schedule-container" class="schedule-list"></div>
+    <div class="container">
 
+        <div class="section-header">
+
+            <div class="section-index">
+                03
+            </div>
+
+            <div>
+
+                <p class="section-label">
+                    ROADMAP · PLAN
+                </p>
+
+                <h2>Schedule</h2>
+
+                <p class="section-description">
+                    schedule.json에 일정만 입력하면
+                    이곳에 자동으로 표시됩니다.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!--
+        중요:
+        일정도 HTML에 직접 작성하지 않음.
+        app.js가 schedule.json을 읽어서 생성함.
+        -->
+
+        <div
+            id="schedule-container"
+            class="schedule-list"
+        >
+            <p class="loading-text">
+                일정을 불러오는 중...
+            </p>
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 
 
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer class="footer">
 
@@ -453,6 +441,8 @@
 
 </footer>
 
+
+<!-- 반드시 필요 -->
 <script src="app.js"></script>
 
 </body>
