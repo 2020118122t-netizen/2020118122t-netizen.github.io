@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026.09.15",
+    "type": "GRADUATE SCHOOL",
+    "title": "Quantum Computing 수업",
+    "description": "Hadamard Gate와 CNOT Gate 복습"
+  },
+  {
+    "date": "2026.09.20",
+    "type": "QA DEVELOPMENT",
+    "title": "QA Automation",
+    "description": "문서 정합성 비교 프로그램 개선"
+  }
+]

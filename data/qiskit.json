@@ -1,0 +1,10 @@
+[
+  {
+    "number": "01",
+    "title": "Qubit & Superposition",
+    "description": "Hadamard Gate를 이용한 중첩 상태 실습",
+    "status": "OPEN",
+    "result": "50% |0>, 50% |1>",
+    "tags": ["Qubit", "H Gate", "Qiskit"]
+  }
+]
